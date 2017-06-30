@@ -1,0 +1,287 @@
+@import url("https://fonts.googleapis.com/css?family=Alfa+Slab+One|Diplomata");
+body {
+  background-color: #333333;
+  color: #e57304;
+  overflow-y: hidden;
+  overflow-x: hidden; }
+
+header {
+  background-color: #333333;
+  color: #e57304;
+  -webkit-box-shadow: 0px 10px 15px rgba(0, 0, 0, 0.5);
+          box-shadow: 0px 10px 15px rgba(0, 0, 0, 0.5);
+  font-style: italic;
+  font-size: 80px; }
+
+body {
+  background-image: url("../img/ticket/header1.png");
+  background-repeat: repeat; }
+
+.sala {
+  letter-spacing: 2px;
+  min-width: 590px;
+  width: 100%;
+  background: -webkit-gradient(linear, left top, left bottom, from(rgba(51, 51, 51, 0.9)), color-stop(rgba(51, 51, 51, 0.9)), to(#232323));
+  background: -webkit-linear-gradient(rgba(51, 51, 51, 0.9), rgba(51, 51, 51, 0.9), #232323);
+  background: -moz-linear-gradient(rgba(51, 51, 51, 0.9), rgba(51, 51, 51, 0.9), #232323);
+  background: -o-linear-gradient(rgba(51, 51, 51, 0.9), rgba(51, 51, 51, 0.9), #232323);
+  background: linear-gradient(rgba(51, 51, 51, 0.9), rgba(51, 51, 51, 0.9), #232323);
+  margin: 10% auto;
+  padding: 10px;
+  -webkit-border-radius: 5px;
+          border-radius: 5px;
+  -webkit-box-shadow: 0px 10px 15px rgba(0, 0, 0, 0.5);
+          box-shadow: 0px 10px 15px rgba(0, 0, 0, 0.5); }
+  .sala p {
+    font-size: 20px;
+    font-weight: 900; }
+  .sala button {
+    float: right;
+    background-color: #444;
+    border-color: #777; }
+  .sala #ekran {
+    background-color: #252525;
+    width: 80%;
+    height: 20px;
+    text-align: center;
+    margin: 30px auto;
+    -webkit-border-radius: 5px;
+            border-radius: 5px; }
+  .sala #places {
+    margin: 5% auto;
+    width: 550px; }
+    .sala #places .place {
+      background-color: #cdcdcd;
+      width: 45px;
+      height: 40px;
+      float: left;
+      margin-right: 10px;
+      margin-bottom: 10px;
+      -webkit-border-radius: 5px;
+              border-radius: 5px;
+      -webkit-transition: background-color 0.2s linear 0s;
+      -o-transition: background-color 0.2s linear 0s;
+      -moz-transition: background-color 0.2s linear 0s;
+      transition: background-color 0.2s linear 0s; }
+    .sala #places .place.booked {
+      background-color: #d61717; }
+    .sala #places .place.free.select {
+      background-color: #35ba3c; }
+    .sala #places:before, .sala #places:after {
+      content: " ";
+      /* 1 */
+      display: table;
+      /* 2 */ }
+    .sala #places:after {
+      clear: both; }
+
+.orderPane {
+  color: #032100;
+  width: 300px;
+  height: 100%;
+  background-color: #35ba3c;
+  position: fixed;
+  left: -300px;
+  top: 0px;
+  -webkit-transition: left 0.5s linear 0s;
+  -o-transition: left 0.5s linear 0s;
+  -moz-transition: left 0.5s linear 0s;
+  transition: left 0.5s linear 0s;
+  padding: 20px; }
+  .orderPane h2 {
+    margin-bottom: 0px;
+    font-family: 'Alfa Slab One', cursive;
+    opacity: 0.7; }
+  .orderPane hr {
+    margin-top: 10px;
+    opacity: 0.2; }
+  .orderPane .sticker {
+    text-align: center;
+    position: absolute;
+    right: -60px;
+    top: 120px;
+    width: 90px;
+    background-color: #35ba3c;
+    padding: 15px;
+    font-weight: 900;
+    -webkit-border-radius: 5px 5px 0px 0px;
+            border-radius: 5px 5px 0px 0px;
+    -webkit-transform: rotate(90deg);
+       -moz-transform: rotate(90deg);
+        -ms-transform: rotate(90deg);
+         -o-transform: rotate(90deg);
+            transform: rotate(90deg);
+    font-family: 'Alfa Slab One', cursive;
+    letter-spacing: 2px; }
+  .orderPane .orders {
+    height: 60%;
+    width: 100%;
+    overflow: auto;
+    padding-bottom: 20px;
+    padding-right: 20px; }
+    .orderPane .orders .ticket {
+      margin-bottom: 20px;
+      background: url("../img/ticket/drawing.svg") no-repeat;
+      -o-background-size: 100% 100%;
+         background-size: 100% 100%; }
+      .orderPane .orders .ticket .inside {
+        margin-left: 10px;
+        margin-right: 10px;
+        padding: 10px 20px 10px 25px;
+        font-family: 'Alfa Slab One', cursive; }
+        .orderPane .orders .ticket .inside select {
+          height: 30px;
+          background-color: #6dff75; }
+  .orderPane input[type="button"] {
+    font-family: 'Alfa Slab One', cursive;
+    letter-spacing: 2px;
+    background: #2ea034;
+    border: 2px solid #032100;
+    color: #032100;
+    padding: 10px;
+    width: 90%;
+    margin: 5px auto;
+    font-size: 22px;
+    font-weight: 900;
+    position: absolute;
+    bottom: 20px;
+    left: 5%;
+    -webkit-box-shadow: 0px 10px 15px rgba(0, 0, 0, 0.5);
+            box-shadow: 0px 10px 15px rgba(0, 0, 0, 0.5);
+    -webkit-transition: background 0.3s linear 0s;
+    -o-transition: background 0.3s linear 0s;
+    -moz-transition: background 0.3s linear 0s;
+    transition: background 0.3s linear 0s; }
+    .orderPane input[type="button"]:hover {
+      background: #217726; }
+
+#bottomSum {
+  background-color: rgba(51, 51, 51, 0.9);
+  padding: 20px;
+  width: 850px;
+  margin: 10px auto; }
+  #bottomSum button {
+    display: inline-block;
+    float: right; }
+
+.confirmation {
+  display: none;
+  position: fixed;
+  top: 0px;
+  left: 0px;
+  width: 100%;
+  height: 100%;
+  margin: auto;
+  background: rgba(0, 0, 0, 0.7); }
+
+.form {
+  display: none;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+     -moz-transform: translate(-50%, -50%);
+      -ms-transform: translate(-50%, -50%);
+       -o-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%); }
+  .form > div {
+    overflow: auto;
+    margin: 0px;
+    width: 100%;
+    height: auto;
+    background: #333333;
+    padding: 30px;
+    -webkit-border-radius: 5px;
+            border-radius: 5px; }
+    .form > div h1 {
+      margin: 0px auto 60px auto; }
+    .form > div .text {
+      font-size: 20px;
+      padding: 0px;
+      margin-bottom: 10px; }
+    .form > div .col-sm-8 {
+      padding: 0; }
+      .form > div .col-sm-8 input[type="text"] {
+        padding: 10px;
+        margin: 0px;
+        width: 100%;
+        margin-bottom: 10px;
+        background-color: #222;
+        border: 1px solid #e57304; }
+    .form > div input[type="submit"] {
+      padding: 20px;
+      font-size: 20px;
+      font-weight: 900;
+      background-color: #222;
+      border: 2px solid #e57304; }
+
+#alertBox {
+  background-color: #d61717;
+  color: white;
+  -webkit-border-radius: 0px 0px 5px 5px;
+          border-radius: 0px 0px 5px 5px;
+  width: 30%;
+  position: fixed;
+  top: -100px;
+  left: 35%;
+  padding: 15px;
+  -webkit-transition: top 0.5s linear 0s;
+  -o-transition: top 0.5s linear 0s;
+  -moz-transition: top 0.5s linear 0s;
+  transition: top 0.5s linear 0s; }
+
+#successBox {
+  background-color: #35ba3c;
+  color: white;
+  -webkit-border-radius: 0px 0px 5px 5px;
+          border-radius: 0px 0px 5px 5px;
+  width: 30%;
+  position: fixed;
+  top: -100px;
+  left: 35%;
+  padding: 15px;
+  -webkit-transition: top 0.5s linear 0s;
+  -o-transition: top 0.5s linear 0s;
+  -moz-transition: top 0.5s linear 0s;
+  transition: top 0.5s linear 0s; }
+  #successBox i {
+    font-size: 20px;
+    margin-right: 20px;
+    opacity: 0.5; }
+
+/* Let's get this party started */
+::-webkit-scrollbar {
+  width: 12px; }
+
+/* Track */
+::-webkit-scrollbar-track {
+  -webkit-box-shadow: inset 0 0 6px #032100;
+  -webkit-border-radius: 10px;
+  border-radius: 10px; }
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  -webkit-border-radius: 10px;
+  border-radius: 10px;
+  background: #032100;
+  -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.5); }
+
+::-webkit-scrollbar-thumb:window-inactive {
+  background: #032100; }
+
+hr {
+  display: block;
+  height: 1px;
+  border: 0;
+  border-top: 1px solid #032100;
+  padding: 0; }
+
+@media screen and (max-width: 850px) {
+  #alertBox, #successBox {
+    width: 96%;
+    left: 2%; }
+
+  .form {
+    width: 96%; }
+    .form > div {
+      padding: 10px; } }

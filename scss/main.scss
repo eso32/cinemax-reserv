@@ -1,0 +1,306 @@
+@import url('https://fonts.googleapis.com/css?family=Alfa+Slab+One|Diplomata');
+$mainColor: #333333;
+$text: #e57304;
+$green: #35ba3c;
+
+body{
+  background-color: #333333;
+  color: $text;
+  overflow-y: hidden;
+  overflow-x: hidden;
+}
+
+header{
+  // background: url('../img/ticket/header.png') repeat-x;
+  background-color: $mainColor;
+  color: $text;
+  box-shadow: 0px 10px 15px rgba(0,0,0,0.5);
+  font:{
+    style: italic;
+    size: 80px;
+  }
+}
+
+body{
+  // background: url('../img/bg.jpg') no-repeat;
+  background-image: url('../img/ticket/header1.png');
+  background-repeat: repeat;
+}
+
+.sala{
+  // font-family: 'Alfa Slab One', cursive;
+  letter-spacing: 2px;
+  min-width: 590px;
+  width: 100%;
+  background: linear-gradient(rgba(51,51,51,0.9), rgba(51,51,51,0.9), rgba(35,35,35,1));
+  margin: 10% auto;
+  padding: 10px;
+  border-radius: 5px;
+  box-shadow: 0px 10px 15px rgba(0,0,0,0.5);
+  p{
+    font:{
+      size: 20px;
+      weight: 900;
+    }
+  }
+  button{
+    float:right;
+    background-color: #444;
+    border-color: #777;
+  }
+  #ekran{
+    background-color: #252525;
+    width: 80%;
+    height: 20px;
+    text-align: center;
+    margin: 30px auto;
+    border-radius: 5px;
+  }
+  #places{
+    margin: 5% auto;
+    width: 550px;
+    .place{
+      background-color: #cdcdcd;
+      width: 45px;
+      height: 40px;
+      float: left;
+      margin-right: 10px;
+      margin-bottom: 10px;
+      border-radius: 5px;
+      transition: background-color 0.2s linear 0s;
+    }
+    .place.booked{
+      background-color: #d61717;
+    }
+    .place.free.select{
+      background-color: $green;
+    }
+    &:before, &:after {
+        content: " "; /* 1 */
+        display: table; /* 2 */
+    }
+
+    &:after {
+        clear: both;
+    }
+  }
+}
+
+.orderPane{
+  color: #032100;
+  width:300px;
+  height: 100%;
+  background-color: $green;
+  position:fixed;
+  left:-300px;
+  top:0px;
+  transition: left 0.5s linear 0s;
+  padding: 20px;
+  h2{
+    margin-bottom: 0px;
+    font-family: 'Alfa Slab One', cursive;
+    opacity: 0.7;
+  }
+  hr{
+    margin-top: 10px;
+    opacity: 0.2;
+  }
+  .sticker{
+    text-align: center;
+    position:absolute;
+    right: -60px;
+    top: 120px;
+    width: 90px;
+    background-color: $green;
+    padding: 15px;
+    font-weight: 900;
+    border-radius: 5px 5px 0px 0px;
+    transform: rotate(90deg);
+    font-family: 'Alfa Slab One', cursive;
+    letter-spacing: 2px;
+  }
+  .orders{
+    height: 60%;
+    width: 100%;
+    overflow: auto;
+    padding-bottom: 20px;
+    padding-right: 20px;
+    .ticket{
+      margin-bottom: 20px;
+      background: url('../img/ticket/drawing.svg') no-repeat;
+      background-size: 100% 100%;
+      // border: 2px dashed #032100;
+      .inside{
+        margin-left: 10px;
+        margin-right: 10px;
+        // border-left: 2px dotted #032100;
+        // border-right: 2px dotted #032100;
+        padding:10px 20px 10px 25px;
+        font-family: 'Alfa Slab One', cursive;
+        select{
+
+          height:30px;
+          background-color: #6dff75;
+        }
+      }
+    }
+  }
+  input[type="button"]{
+    font-family: 'Alfa Slab One', cursive;
+    letter-spacing: 2px;
+    background: #2ea034;
+    border: 2px solid #032100;
+    color: #032100;
+    padding: 10px;
+    width: 90%;
+    margin: 5px auto;
+    font-size: 22px;
+    font-weight: 900;
+    position: absolute;
+    bottom:20px;
+    left: 5%;
+    box-shadow: 0px 10px 15px rgba(0,0,0,0.5);
+    transition: background 0.3s linear 0s;
+    &:hover{
+      background: #217726;
+    }
+  }
+}
+
+#bottomSum{
+  background-color: rgba(51,51,51,0.9);
+  padding: 20px;
+  width: 850px;
+  margin: 10px auto;
+  button{
+    display: inline-block;
+    float: right;
+  }
+}
+
+.confirmation{
+  display: none;
+  position: fixed;
+  top:0px;
+  left:0px;
+  width:100%;
+  height: 100%;
+  margin: auto;
+  background: rgba(0,0,0,0.7);
+
+}
+
+.form{
+  display: none;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  &>div{
+    overflow: auto;
+    margin: 0px;
+    width: 100%;
+    height: auto;
+    background: rgba(51,51,51,1);
+    padding: 30px;
+    border-radius: 5px;
+    h1{
+      margin: 0px auto 60px auto;
+    }
+    .text{
+      font-size: 20px;
+      padding: 0px;
+      margin-bottom: 10px;
+    }
+    .col-sm-8{
+      padding: 0;
+      input[type="text"]{
+        padding:10px;
+        margin:0px;
+        width: 100%;
+        margin-bottom: 10px;
+        background-color: #222;
+        border: 1px solid $text;
+      }
+    }
+    input[type="submit"]{
+      padding: 20px;
+      font-size: 20px;
+      font-weight: 900;
+      background-color: #222;
+      border: 2px solid $text;
+    }
+  }
+}
+
+#alertBox{
+  background-color: #d61717;
+  color: white;
+  border-radius: 0px 0px 5px 5px;
+  width:30%;
+  position: fixed;
+  top: -100px;
+  left:35%;
+  padding: 15px;
+  transition: top 0.5s linear 0s;
+}
+
+#successBox{
+  background-color: $green;
+  color: white;
+  border-radius: 0px 0px 5px 5px;
+  width:30%;
+  position: fixed;
+  top: -100px;
+  left:35%;
+  padding: 15px;
+  transition: top 0.5s linear 0s;
+  i{
+    font-size: 20px;
+    margin-right: 20px;
+    opacity: 0.5;
+  }
+}
+/* Let's get this party started */
+::-webkit-scrollbar {
+    width: 12px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+    -webkit-box-shadow: inset 0 0 6px #032100;
+    -webkit-border-radius: 10px;
+    border-radius: 10px;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+    -webkit-border-radius: 10px;
+    border-radius: 10px;
+    background: #032100;
+    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.5);
+}
+::-webkit-scrollbar-thumb:window-inactive {
+	background: #032100;
+}
+
+hr {
+    display: block;
+    height: 1px;
+    border: 0;
+    border-top: 1px solid #032100;
+    padding: 0;
+}
+
+@media screen and (max-width: 850px) {
+  #alertBox, #successBox{
+    width: 96%;
+    left: 2%;
+  }
+  .form{
+    width: 96%;
+    &>div{
+      padding: 10px;
+    }
+  }
+}
