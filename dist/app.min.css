@@ -49,24 +49,29 @@ body {
             border-radius: 5px; }
   .sala #places {
     margin: 5% auto;
-    width: 550px; }
+    width: 85%; }
     .sala #places .place {
+      border: 1px solid black;
       background-color: #cdcdcd;
-      width: 45px;
-      height: 40px;
+      width: 8%;
+      height: 5%;
       float: left;
-      margin-right: 10px;
+      margin-right: 2%;
       margin-bottom: 10px;
-      -webkit-border-radius: 5px;
-              border-radius: 5px;
-      -webkit-transition: background-color 0.2s linear 0s;
-      -o-transition: background-color 0.2s linear 0s;
-      -moz-transition: background-color 0.2s linear 0s;
-      transition: background-color 0.2s linear 0s; }
+      -webkit-border-radius: 2px;
+              border-radius: 2px;
+      -webkit-transition: background-color 0.5s linear 0s;
+      -o-transition: background-color 0.5s linear 0s;
+      -moz-transition: background-color 0.5s linear 0s;
+      transition: background-color 0.5s linear 0s; }
     .sala #places .place.booked {
       background-color: #d61717; }
     .sala #places .place.free.select {
-      background-color: #35ba3c; }
+      background-color: #35ba3c;
+      -webkit-animation: reserv 0.5s linear;
+         -moz-animation: reserv 0.5s linear;
+           -o-animation: reserv 0.5s linear;
+              animation: reserv 0.5s linear; }
     .sala #places:before, .sala #places:after {
       content: " ";
       /* 1 */
@@ -75,6 +80,91 @@ body {
     .sala #places:after {
       clear: both; }
 
+@-webkit-keyframes reserv {
+  0% {
+    -webkit-transform: scale(1) rotate(0deg);
+            transform: scale(1) rotate(0deg); }
+  50% {
+    -webkit-transform: scale(1.5) rotate(7deg);
+            transform: scale(1.5) rotate(7deg);
+    opacity: 0.5; }
+  90% {
+    -webkit-transform: scale(0.9) rotate(-5deg);
+            transform: scale(0.9) rotate(-5deg);
+    opacity: 1; }
+  95% {
+    -webkit-transform: scale(1.05) rotate(3deg);
+            transform: scale(1.05) rotate(3deg); }
+  100% {
+    -webkit-transform: scale(1) rotate(0deg);
+            transform: scale(1) rotate(0deg); } }
+
+@-moz-keyframes reserv {
+  0% {
+    -moz-transform: scale(1) rotate(0deg);
+         transform: scale(1) rotate(0deg); }
+  50% {
+    -moz-transform: scale(1.5) rotate(7deg);
+         transform: scale(1.5) rotate(7deg);
+    opacity: 0.5; }
+  90% {
+    -moz-transform: scale(0.9) rotate(-5deg);
+         transform: scale(0.9) rotate(-5deg);
+    opacity: 1; }
+  95% {
+    -moz-transform: scale(1.05) rotate(3deg);
+         transform: scale(1.05) rotate(3deg); }
+  100% {
+    -moz-transform: scale(1) rotate(0deg);
+         transform: scale(1) rotate(0deg); } }
+
+@-o-keyframes reserv {
+  0% {
+    -o-transform: scale(1) rotate(0deg);
+       transform: scale(1) rotate(0deg); }
+  50% {
+    -o-transform: scale(1.5) rotate(7deg);
+       transform: scale(1.5) rotate(7deg);
+    opacity: 0.5; }
+  90% {
+    -o-transform: scale(0.9) rotate(-5deg);
+       transform: scale(0.9) rotate(-5deg);
+    opacity: 1; }
+  95% {
+    -o-transform: scale(1.05) rotate(3deg);
+       transform: scale(1.05) rotate(3deg); }
+  100% {
+    -o-transform: scale(1) rotate(0deg);
+       transform: scale(1) rotate(0deg); } }
+
+@keyframes reserv {
+  0% {
+    -webkit-transform: scale(1) rotate(0deg);
+       -moz-transform: scale(1) rotate(0deg);
+         -o-transform: scale(1) rotate(0deg);
+            transform: scale(1) rotate(0deg); }
+  50% {
+    -webkit-transform: scale(1.5) rotate(7deg);
+       -moz-transform: scale(1.5) rotate(7deg);
+         -o-transform: scale(1.5) rotate(7deg);
+            transform: scale(1.5) rotate(7deg);
+    opacity: 0.5; }
+  90% {
+    -webkit-transform: scale(0.9) rotate(-5deg);
+       -moz-transform: scale(0.9) rotate(-5deg);
+         -o-transform: scale(0.9) rotate(-5deg);
+            transform: scale(0.9) rotate(-5deg);
+    opacity: 1; }
+  95% {
+    -webkit-transform: scale(1.05) rotate(3deg);
+       -moz-transform: scale(1.05) rotate(3deg);
+         -o-transform: scale(1.05) rotate(3deg);
+            transform: scale(1.05) rotate(3deg); }
+  100% {
+    -webkit-transform: scale(1) rotate(0deg);
+       -moz-transform: scale(1) rotate(0deg);
+         -o-transform: scale(1) rotate(0deg);
+            transform: scale(1) rotate(0deg); } }
 .orderPane {
   color: #032100;
   width: 300px;

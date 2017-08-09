@@ -12,7 +12,7 @@ var gulp = require('gulp'),
     browserSync = require('browser-sync');
 
 //DIST - SRC -------------------------------------------------------
-var dist_js = 'dist/';
+var dist_js = 'js/';
 var dist_css = 'dist/';
 var dist_img = 'dist/img';
 
@@ -39,8 +39,7 @@ gulp.task('js', function(){
   .pipe(plumber())
   .pipe(jshint())
   .pipe(jshint.reporter('default'))
-  .pipe(uglify())
-  .pipe(concat('app.min.js'))
+  // .pipe(uglify())
   .pipe(gulp.dest(dist_js))
   .pipe(notify({message: 'JS saved! Reloading...'}))
   .pipe(browserSync.reload({stream: true}));

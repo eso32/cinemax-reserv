@@ -81,7 +81,7 @@
   <script src="vendors/jquery-3.2.1.min.js"></script>
 
   <!-- APP SCRIPTS -->
-  <script src="dist/app.min.js"></script>
+  <script src="js/app.js"></script>
 
 </body>
 </html>
