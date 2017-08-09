@@ -4,16 +4,17 @@
   "description": "",
   "main": "gulpfile.js",
   "dependencies": {
+    "browser-sync": "2.2.3",
     "gulp": "^3.9.1",
-    "gulp-concat": "2.5.2",
-    "gulp-plumber": "0.6.6",
-    "gulp-minify-css": "0.5.1",
     "gulp-autoprefixer": "^3.1.1",
+    "gulp-concat": "2.5.2",
+    "gulp-jshint": "1.9.2",
+    "gulp-minify-css": "0.5.1",
+    "gulp-notify": "2.2.0",
+    "gulp-plumber": "0.6.6",
     "gulp-uglify": "^2.1.2",
     "gulp-watch": "4.1.1",
-    "gulp-notify": "2.2.0",
-    "gulp-jshint": "1.9.2",
-    "browser-sync": "2.2.3"
+    "mustache": "^2.3.0"
   },
   "devDependencies": {
     "babel-preset-env": "^1.5.2",

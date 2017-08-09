@@ -77,6 +77,7 @@
 
   </div>
 
+
   <!-- VENDOR SCRIPTS -->
   <script src="vendors/jquery-3.2.1.min.js"></script>
 

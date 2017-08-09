@@ -66,12 +66,15 @@ body {
       transition: background-color 0.5s linear 0s; }
     .sala #places .place.booked {
       background-color: #d61717; }
+    .sala #places .place.free {
+      cursor: pointer; }
     .sala #places .place.free.select {
       background-color: #35ba3c;
       -webkit-animation: reserv 0.5s linear;
          -moz-animation: reserv 0.5s linear;
            -o-animation: reserv 0.5s linear;
-              animation: reserv 0.5s linear; }
+              animation: reserv 0.5s linear;
+      cursor: pointer; }
     .sala #places:before, .sala #places:after {
       content: " ";
       /* 1 */
@@ -202,7 +205,8 @@ body {
          -o-transform: rotate(90deg);
             transform: rotate(90deg);
     font-family: 'Alfa Slab One', cursive;
-    letter-spacing: 2px; }
+    letter-spacing: 2px;
+    cursor: pointer; }
   .orderPane .orders {
     height: 60%;
     width: 100%;

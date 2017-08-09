@@ -76,9 +76,13 @@ body{
     .place.booked{
       background-color: #d61717;
     }
+    .place.free{
+      cursor: pointer;
+    }
     .place.free.select{
       background-color: $green;
       animation: reserv 0.5s linear;
+      cursor: pointer;
     }
     &:before, &:after {
         content: " "; /* 1 */
@@ -145,6 +149,7 @@ body{
     transform: rotate(90deg);
     font-family: 'Alfa Slab One', cursive;
     letter-spacing: 2px;
+    cursor: pointer;
   }
   .orders{
     height: 60%;
