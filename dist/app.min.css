@@ -3,7 +3,9 @@ body {
   background-color: #333333;
   color: #e57304;
   overflow-y: hidden;
-  overflow-x: hidden; }
+  overflow-x: hidden;
+  background-image: url("../img/ticket/header1.png");
+  background-repeat: repeat; }
 
 header {
   background-color: #333333;
@@ -12,10 +14,6 @@ header {
           box-shadow: 0px 10px 15px rgba(0, 0, 0, 0.5);
   font-style: italic;
   font-size: 80px; }
-
-body {
-  background-image: url("../img/ticket/header1.png");
-  background-repeat: repeat; }
 
 .sala {
   letter-spacing: 2px;
@@ -301,13 +299,25 @@ body {
         width: 100%;
         margin-bottom: 10px;
         background-color: #222;
-        border: 1px solid #e57304; }
+        border: 1px solid #e57304;
+        font-size: 20px;
+        padding: 5px; }
+        .form > div .col-sm-8 input[type="text"]:focus {
+          outline: 0; }
     .form > div input[type="submit"] {
       padding: 20px;
       font-size: 20px;
       font-weight: 900;
       background-color: #222;
-      border: 2px solid #e57304; }
+      border: 2px solid #e57304;
+      -webkit-transition: all 0.5s linear;
+      -o-transition: all 0.5s linear;
+      -moz-transition: all 0.5s linear;
+      transition: all 0.5s linear; }
+      .form > div input[type="submit"]:focus {
+        outline: 0; }
+      .form > div input[type="submit"]:hover {
+        background-color: #333; }
 
 #alertBox {
   background-color: #d61717;

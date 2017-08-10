@@ -42,8 +42,6 @@
   <div class="form">
     <div><h1>Confirm order:</h1>
       <div>
-        <!-- <form method="get" action="reciver.php"> -->
-
           <div class="col-sm-4 col-xs-12 text">
             Full name:
           </div>
@@ -62,13 +60,13 @@
             e-mail:
           </div>
           <div class="col-sm-8 col-xs-12">
-            <input type="text" name="email" id="mail"/>
+            <input type="text" name="email" id="mail" />
           </div>
         <input id="btnLast" class="col-xs-12" type="submit" value="Book now"/>
-
       </div>
     </div>
   </div>
+
   <div id="alertBox">
     You haven't picked any tickets!<br />
     Select free seats and click green label ORDER on the left hand side.
@@ -82,7 +80,10 @@
   <script src="vendors/jquery-3.2.1.min.js"></script>
 
   <!-- APP SCRIPTS -->
-  <script src="js/app.js"></script>
+  <script src="js/PubSub.js"></script>
+  <script src="js/form.js"></script>
+  <script src="js/booking.js"></script>
+  <script src="js/reservation.js"></script>
 
 </body>
 </html>
